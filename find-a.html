@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <style>
+    body{
+      font-size: 30px;
+      font-family: monospace;
+    }
+    p{
+      font-weight: none;
+    }
+
+    button {
+        background-color: white; /* Green */
+        border: 2px solid #008CBA;
+        color: black;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.1s;
+        cursor: pointer;
+
+
+    }
+
+    button{
+        background-color: #008CBA; /* Green */
+        color: white;
+    }
+
+    input{
+      width: 100px;
+      font-size: 30px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <p>Display a:</p>
+  <p id="DisplayHere">></p>
+  <p>Display Tangent:</p>
+  <p id="DisplayTangent">></p>
+  <p>Display Alpha:</p>
+  <p id="DisplayAlpha">></p>
+  <input id="n">
+  <button onclick="findA()" >Generate</button>
+
+
+
+
+<script>
+
+  function findA(){
+    var o = (Math.PI);
+    var n = document.getElementById("n").value;
+    var alpha = (o/n);
+    var f = Math.tan(alpha);
+    var a = Math.sqrt(1*1+(f*f));
+    document.getElementById("DisplayHere").innerHTML="> "+ a;
+    document.getElementById("DisplayTangent").innerHTML="> "+ f*1;
+    document.getElementById("DisplayAlpha").innerHTML="> "+ alpha;
+  }
+</script>
+</body>
+
+
+</html>
